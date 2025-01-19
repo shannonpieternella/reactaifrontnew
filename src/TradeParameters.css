@@ -1,0 +1,31 @@
+.trade-parameters {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.trade-parameters h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #0f0;
+}
+
+.parameter {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.label {
+    font-weight: bold;
+    color: #aaa;
+}
+
+.value {
+    color: #fff;
+}

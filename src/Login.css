@@ -1,0 +1,181 @@
+/* Achtergrond met kleurverloop */
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #002200, #00ff00);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bewegende vormen */
+.shape {
+  position: absolute;
+  opacity: 0.3;
+  /* Meer zichtbaar */
+  animation: moveShape 8s infinite alternate ease-in-out;
+}
+
+/* Vierkant met een driehoek */
+.square {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  bottom: 15%;
+  right: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Zorg dat de driehoek gecentreerd is */
+  animation: moveShape 10s infinite alternate ease-in-out;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Cirkel */
+.circle {
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  top: 5%;
+  left: 10%;
+  animation: moveShape 8s infinite alternate ease-in-out;
+}
+
+/* Animatie voor vormen */
+@keyframes moveShape {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(40px, -40px) rotate(15deg);
+  }
+
+  100% {
+    transform: translate(-40px, 40px) rotate(-15deg);
+  }
+}
+
+/* Login Container */
+.container.login {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 3rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 380px;
+  text-align: center;
+}
+
+/* Titel */
+.title {
+  font-size: 2.4rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* Separator */
+.separator {
+  width: 50%;
+  height: 2px;
+  background: #0f0;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+/* Invoervelden */
+.input-container {
+  margin-bottom: 1.5rem;
+}
+
+.input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 0 auto;
+  border: none;
+  border-bottom: 2px solid #0f0;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input:focus {
+  border-bottom-color: #0c0;
+  box-shadow: 0px 4px 6px rgba(0, 255, 0, 0.4);
+}
+
+/* Opties */
+.options {
+  display: flex;
+  justify-content: space-between; /* Ensures space between the two elements */
+  align-items: center; /* Vertically align items */
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center; /* Vertically align the checkbox and text */
+  gap: 5px; /* Add spacing between the checkbox and the label text */
+}
+
+.link {
+  color: #0f0;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+
+/* Button */
+.button {
+  width: 100%;
+  padding: 12px;
+  background: #0f0;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 255, 0, 0.4);
+}
+
+.button:hover {
+  background: #0c0;
+}
+
+.footer-text {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #fff;
+  text-align: center; /* Zorg dat de tekst gecentreerd is */
+}
+
+.footer-text .link {
+  font-weight: bold;
+  color: #0f0;
+  text-decoration: none;
+}
+
+.footer-text .link:hover {
+  color: #0c0;
+  text-decoration: underline;
+}
