@@ -7,6 +7,7 @@ const TradeParameters = () => {
         stopLoss: 0,
         entryPrice: 0,
         takeProfit: 0,
+        biasTrend: "Notrend", // Add initial state for biasTrend
     });
     const [error, setError] = useState(null);
 
@@ -14,7 +15,7 @@ const TradeParameters = () => {
         // Functie om tradeparameters op te halen van de backend
         const fetchTradeParameters = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/trade-parameters");
+                const response = await axios.get("http://188.34.157.27:5002/trade-parameters");
                 setTradeParams(response.data[0]); // Zet de eerste (en waarschijnlijk enige) tradeparameter in de state
             } catch (error) {
                 setError("Fout bij het ophalen van de tradeparameters");
@@ -47,6 +48,10 @@ const TradeParameters = () => {
             <div className="parameter">
                 <span className="label">Take Profit:</span>
                 <span className="value">{tradeParams.takeProfit}</span>
+            </div>
+            <div className="parameter">
+                <span className="label">Bias Trend:</span>
+                <span className="value">{tradeParams.biasTrend}</span>
             </div>
         </div>
     );

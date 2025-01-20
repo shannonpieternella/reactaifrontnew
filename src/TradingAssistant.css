@@ -2,12 +2,11 @@
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
-  background-color: #333333;
-  /* Grijze achtergrond */
+  background: linear-gradient(to bottom right, #002200, #00ff00);
+  /* Same gradient background as login page */
   color: #00ff00;
-  /* Groene tekstkleur */
+  /* Green text color */
   line-height: 1.6;
-  /* Betere leesbaarheid */
 }
 
 .dashboard {
@@ -20,14 +19,14 @@ body {
 
 .dashboard-header {
   text-align: center;
-  background: rgba(169, 169, 169, 0.9);
-  /* Grijze achtergrond met transparantie */
+  background: rgba(0, 0, 0, 0.9);
+  /* Dark background with transparency */
   border-radius: 10px;
   padding: 30px;
   width: 100%;
   max-width: 900px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  /* Subtiele schaduw */
+  box-shadow: 0 5px 20px rgba(0, 255, 0, 0.5);
+  /* Green glow effect */
   margin-bottom: 20px;
 }
 
@@ -35,14 +34,14 @@ body {
   margin: 0;
   font-size: 3rem;
   color: #00ff00;
-  /* Groene tekst voor koptekst */
+  /* Green text for header */
 }
 
 .dashboard-header p {
   margin: 10px 0 0;
   font-size: 1.2rem;
   color: #d1d1d1;
-  /* Lichtgrijze tekstkleur voor ondertekst */
+  /* Light gray text for subtitle */
 }
 
 .dashboard-body {
@@ -56,12 +55,12 @@ body {
 .analysis-section,
 .audio-section,
 .tradingview-section {
-  background: rgba(169, 169, 169, 0.85);
-  /* Grijze semi-transparante achtergrond */
+  background: rgba(0, 0, 0, 0.85);
+  /* Dark semi-transparent background */
   border-radius: 10px;
   padding: 25px;
-  box-shadow: 0 5px 20px rgba(81, 81, 81, 81);
-  /* Subtiele schaduw */
+  box-shadow: 0 5px 20px rgba(0, 255, 0, 0.3);
+  /* Subtle green shadow */
 }
 
 .analysis-section h2,
@@ -70,9 +69,9 @@ body {
   margin: 0;
   font-size: 1.75rem;
   color: #00ff00;
-  /* Groene kleur voor sectiekopteksten */
+  /* Green section titles */
   border-bottom: 3px solid #00ff00;
-  /* Groene onderstreep */
+  /* Green underline */
   padding-bottom: 12px;
   margin-bottom: 20px;
 }
@@ -81,7 +80,7 @@ body {
 .audio-section audio {
   font-size: 1.1rem;
   color: #d1d1d1;
-  /* Lichtgrijze tekstkleur voor inhoud */
+  /* Light gray text color for content */
 }
 
 .audio-section audio {
@@ -92,18 +91,18 @@ body {
 .tradingview-widget {
   width: 100%;
   height: 500px;
-  /* Hoogte van de TradingView-widget */
+  /* Widget height */
   background-color: #121212;
-  /* Donkere achtergrond voor de widget */
+  /* Dark background */
   border-radius: 8px;
-  /* Subtiele ronde hoeken */
+  /* Rounded corners */
 }
 
 .dashboard-footer {
   margin-top: 30px;
   font-size: 1.1rem;
   color: #d1d1d1;
-  /* Lichtgrijze tekstkleur voor footer */
+  /* Light gray footer text */
   text-align: center;
 }
 
@@ -113,19 +112,20 @@ body {
 
 .dashboard-footer .brand {
   color: #00ff00;
-  /* Groene kleur voor de merknaam */
+  /* Green color for brand name */
   font-weight: bold;
 }
 
 .dashboard-footer p::before {
   content: "⚡ ";
   color: #00ff00;
-  /* Groene icoontje voor de footertekst */
+  /* Green icon for footer text */
 }
 
 .logout-button {
-  background-color: #00ff00; /* Red color for logout */
-  color: white;
+  background-color: #00ff00;
+  /* Green color for logout */
+  color: black;
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
@@ -135,5 +135,47 @@ body {
 }
 
 .logout-button:hover {
-  background-color: #d32f2f; /* Darker red on hover */
+  background-color: #0c0;
+  /* Slightly darker green on hover */
+}
+
+/* Buttons for Save and Submit */
+.dashboard-button {
+  background-color: #00ff00;
+  /* Green buttons */
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 255, 0, 0.4);
+}
+
+.dashboard-button:hover {
+  background-color: #0c0;
+}
+
+.input-group label {
+  color: #d1d1d1;
+  font-size: 1rem;
+}
+
+.input-group input,
+.prompt-input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #00ff00;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-group input:focus,
+.prompt-input:focus {
+  border-bottom-color: #0c0;
+  box-shadow: 0px 4px 6px rgba(0, 255, 0, 0.4);
 }

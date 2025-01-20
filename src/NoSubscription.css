@@ -155,3 +155,18 @@
     margin-top: 2rem;
     font-size: 0
 }
+
+.back-to-login {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.back-to-login:hover {
+    text-decoration: underline;
+}

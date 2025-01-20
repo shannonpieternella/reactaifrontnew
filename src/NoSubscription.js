@@ -1,13 +1,21 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./NoSubscription.css";
 
 const NoSubscription = () => {
+    const navigate = useNavigate(); // Use React Router's useNavigate hook for navigation
+
     return (
         <div className="background">
             {/* Bewegende Achtergrondvormen */}
             <div className="shape circle"></div>
             <div className="shape square">
                 <div className="triangle"></div>
+            </div>
+
+            {/* Back to Login Arrow */}
+            <div className="back-to-login" onClick={() => navigate("/login")}>
+                ← Back to Login
             </div>
 
             {/* Inhoud */}
@@ -25,11 +33,7 @@ const NoSubscription = () => {
                     >
                         Activate Subscription
                     </a>
-                    
                 </div>
-                <p className="footer-text">
-                    Have questions? Visit our <a href="#" className="link">Help Center</a>.
-                </p>
             </div>
         </div>
     );

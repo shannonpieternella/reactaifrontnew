@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { API_BASE_URL } from "./apiConfig";
 import "./ForgotPassword.css";
@@ -7,6 +8,7 @@ const ForgotPassword = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate(); // Use React Router's useNavigate hook for navigation
 
   const handleResetPassword = async (e) => {
     e.preventDefault();
@@ -26,6 +28,11 @@ const ForgotPassword = () => {
       <div className="shape square"></div>
       <div className="shape triangle"></div>
       <div className="shape star"></div>
+
+      {/* Back to Login Arrow */}
+      <div className="back-to-login" onClick={() => navigate("/login")}>
+        ← Back to Login
+      </div>
 
       <div className="container forgot-password">
         <h1 className="title">Forgot Password?</h1>
